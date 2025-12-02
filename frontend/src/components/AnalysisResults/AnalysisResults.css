@@ -1,0 +1,275 @@
+.analysis-results {
+  background: var(--white);
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.analysis-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  border: 1px solid var(--border);
+}
+
+.analysis-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Vehicle Summary */
+.vehicle-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.total-vehicles {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: #f8fff8;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  color: var(--primary);
+  border: 1px solid #e8f5e8;
+}
+
+.direction-breakdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.direction-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm);
+  background: #f8f9fa;
+  border-radius: var(--radius-sm);
+}
+
+.direction-name {
+  font-weight: 500;
+}
+
+.vehicle-number {
+  font-weight: 600;
+  color: var(--primary);
+  background: #e8f5e8;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+/* Density Levels */
+.density-levels {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.density-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm);
+  background: #f8f9fa;
+  border-radius: var(--radius-sm);
+}
+
+.density-direction {
+  font-weight: 500;
+}
+
+.density-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Signal Status */
+.signal-status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.signal-status-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  background: #f8f9fa;
+  border-radius: var(--radius-sm);
+}
+
+.signal-direction {
+  font-weight: 500;
+  min-width: 40px;
+}
+
+.signal-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+
+.signal-state {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.signal-summary {
+  display: flex;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.9rem;
+}
+
+/* Recommendations */
+.recommendations-card {
+  grid-column: 1 / -1;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.recommendation-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: #fff8e8;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--secondary);
+}
+
+.recommendation-icon {
+  color: var(--secondary);
+  margin-top: 2px;
+}
+
+.no-recommendations {
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--gray);
+}
+
+/* AI Info */
+.ai-info-card {
+  background: #f0f9ff;
+  border: 1px solid #e1f5fe;
+}
+
+.ai-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.ai-model, .ai-confidence, .ai-processing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm);
+  background: white;
+  border-radius: var(--radius-sm);
+  border: 1px solid #e1f5fe;
+}
+
+.ai-label {
+  font-weight: 500;
+}
+
+.ai-value {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Metadata */
+.metadata-card {
+  grid-column: 1 / -1;
+}
+
+.metadata-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-sm);
+}
+
+.metadata-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm);
+  background: #f8f9fa;
+  border-radius: var(--radius-sm);
+}
+
+.metadata-label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.metadata-value {
+  font-weight: 600;
+}
+
+.status-active {
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .direction-breakdown {
+    grid-template-columns: 1fr;
+  }
+  
+  .signal-status-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .signal-summary {
+    flex-direction: column;
+  }
+  
+  .metadata-content {
+    grid-template-columns: 1fr;
+  }
+}

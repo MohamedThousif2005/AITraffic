@@ -1,0 +1,156 @@
+.traffic-intersection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.intersection-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: var(--dark);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* Roads */
+.road {
+  position: absolute;
+  background: #34495e;
+}
+
+.vertical-road {
+  width: 60px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.horizontal-road {
+  width: 100%;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.intersection-center {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #2c3e50;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Traffic Lights */
+.traffic-light-container {
+  position: absolute;
+  z-index: 10;
+}
+
+.traffic-light-container.north {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.traffic-light-container.south {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.traffic-light-container.east {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.traffic-light-container.west {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Labels */
+.direction-label {
+  position: absolute;
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 500;
+  z-index: 5;
+}
+
+.north-label {
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.south-label {
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.east-label {
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.west-label {
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Legend */
+.intersection-legend {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legend-color.green {
+  background: var(--primary);
+}
+
+.legend-color.yellow {
+  background: var(--secondary);
+}
+
+.legend-color.red {
+  background: var(--danger);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .intersection-container {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .intersection-legend {
+    flex-direction: column;
+    align-items: center;
+  }
+}

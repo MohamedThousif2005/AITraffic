@@ -1,0 +1,100 @@
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: #1a252f;
+  border-radius: var(--radius-md);
+  min-width: 90px;
+}
+
+/* Light Housing */
+.light-housing {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: #2c3e50;
+  border-radius: var(--radius-sm);
+}
+
+/* Lights */
+.light {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #34495e;
+}
+
+.light:not(.active) {
+  background: #34495e;
+  opacity: 0.3;
+}
+
+.light.active {
+  box-shadow: 0 0 8px currentColor;
+}
+
+.light.red.active {
+  background: var(--danger);
+}
+
+.light.yellow.active {
+  background: var(--secondary);
+}
+
+.light.green.active {
+  background: var(--primary);
+}
+
+/* Light Info */
+.light-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  width: 100%;
+}
+
+.direction {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.vehicle-count {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--light);
+  font-size: 0.8rem;
+  background: #34495e;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 10px;
+}
+
+/* Status Badge */
+.status-badge {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: var(--space-xs);
+}
+
+.status-badge.red {
+  background: rgba(231, 76, 60, 0.2);
+  color: var(--danger);
+}
+
+.status-badge.yellow {
+  background: rgba(243, 156, 18, 0.2);
+  color: var(--secondary);
+}
+
+.status-badge.green {
+  background: rgba(46, 204, 113, 0.2);
+  color: var(--primary);
+}
